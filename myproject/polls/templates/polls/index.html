@@ -8,11 +8,11 @@
     <p>No polls are available.</p>
 {% endif %}
 
-{% if user_info %}
-    <p>{{ user_info }}</p>
-    <a href="{% url 'polls:logout' %}">Logout</a>
-{% else %}
-    <p>Please login to continue.</p>
-    <a href="{% url 'polls:login' %}">Login</a>
-{% endif %}
 
+{% if user_info %}
+<p> {{ user_info }} </p>
+<a href="/polls/logout">Logout</a>
+{% else %}
+<p> Please login to continue </p>
+<a href="/polls/user_login">Login</a>
+{%endif%}
